@@ -1,0 +1,130 @@
+<html>
+<title>PU Class</title>
+<head>
+<style>
+  .head{
+    display: block; 
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  body{
+  background-color:rgb(255, 220, 220);
+  }
+  *{
+    padding: 5px 0px;
+  }
+  .select{
+    border: none;
+    border-radius: 5px;
+    display: block; 
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+  }
+  #hh1{
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    margin-top: 10px;
+  }
+  #hh1:hover{
+    background-color: #009205;
+  }
+  .tel{
+    border: none;
+    border-radius: 5px;
+    display: block; 
+    background-color: #0d0086;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    fill: #5faaff;
+  }
+</style>
+<script>
+var ClassData = {
+    "Purnea_University": ["AJ_Mahila_College_Banmankhi","AM_Degree_College_Araria","Araria_College_Araria","Balrampur_College_Balrampur","BD_College_Barsoi","Bhagwati_Mandir_College_Barari","BNC_College_Dhamdaha","DS_College_Katihar","Forbesganj_College_Forbesganj","GLM_College_Banmankhi","Gov_Degree_College_Baisi","Gov_Degree_College_Dhamdaha","KB_Jha_College_Katihar","KD_College_Raniganj","Marwari_College_Kishanganj","MHAND_College_Thakurganj","MJM_Mahila_College_Katihar","ML_Arya_College_Kasba","MLDPKY_College_Araria","ND_College_Rambagh","Nehru_College_Bahadurganj","Peoples_College_Araria","PS_Deegre_College_Harda","Purnea_College_Purnea","Purnea_Mahila_College_Purnia","RDS_College_Salmari","RKK_College_Purnea","RL_College_MadhavNagar","RY_College_Manihari","SC_Degree_College_Katihar","SNSY_College_Rambagh","YNP_College_Raniganj"],
+    "BNMU": ["all"],
+    "Other": ["other"]
+}
+const link = {Purnea_UniversityAJ_Mahila_College_Banmankhi:'https://chat.whatsapp.com/K49GnXPCWNMJvociJgQLwT',
+Purnea_UniversityAM_Degree_College_Araria:'https://chat.whatsapp.com/FAvrX4VIMTdJRK8T0TZNIJ',
+Purnea_UniversityAraria_College_Araria:'https://chat.whatsapp.com/BDD4UWj8AnvB5Jk2MxqQdK',
+Purnea_UniversityBalrampur_College_Balrampur:'https://chat.whatsapp.com/JfyOAiik7zqKglmsj6QYkQ',
+Purnea_UniversityBD_College_Barsoi:'https://chat.whatsapp.com/Bnr2UtfQLxpCHKx2EIzpyI',
+Purnea_UniversityBhagwati_Mandir_College_Barari:'https://chat.whatsapp.com/DAhagNJYYj54K5X19FhaH5',
+Purnea_UniversityBNC_College_Dhamdaha:'https://chat.whatsapp.com/L4HYQclgnP1L1nVOoSxdpd',
+Purnea_UniversityDS_College_Katihar:'https://chat.whatsapp.com/ItsrInY31dG9yo5snrWUoA',
+Purnea_UniversityForbesganj_College_Forbesganj:'https://chat.whatsapp.com/IMHuwcqoF2NCOQFmVHeVwt',
+Purnea_UniversityGLM_College_Banmankhi:'https://chat.whatsapp.com/JjcyscPQtqM1rlw5QAFPqo',
+Purnea_UniversityGov_Degree_College_Baisi:'https://chat.whatsapp.com/FNKwIzDSrlX8d4mp0pyGsY',
+Purnea_UniversityGov_Degree_College_Dhamdaha:'https://chat.whatsapp.com/JNmFWhnAIAY94IDVnOEdXP',
+Purnea_UniversityKB_Jha_College_Katihar:'https://chat.whatsapp.com/K4O18oaq9b7LDtuM1CJjxo',
+Purnea_UniversityKD_College_Raniganj:'https://chat.whatsapp.com/ITjGMpVwdL1BnKoWmwVHzv',
+Purnea_UniversityMarwari_College_Kishanganj:'https://chat.whatsapp.com/ICXQymROIDy5Jt0xn9it2Y',
+Purnea_UniversityMHAND_College_Thakurganj:'https://chat.whatsapp.com/G6X2F3GJ0Ig80Avp602t4r',
+Purnea_UniversityMJM_Mahila_College_Katihar:'https://chat.whatsapp.com/LE7Rjlhqjmg5gbByarNyak',
+Purnea_UniversityML_Arya_College_Kasba:'https://chat.whatsapp.com/JxLAEabHFtg0YexyhuckKE',
+Purnea_UniversityMLDPKY_College_Araria:'https://chat.whatsapp.com/LcaFKdRxDMM8niq50IAf7v',
+Purnea_UniversityND_College_Rambagh:'https://chat.whatsapp.com/LicRHuLrj7M8znlJokxWLj',
+Purnea_UniversityNehru_College_Bahadurganj:'https://chat.whatsapp.com/Bk04D0G371S7v2mDf4TkzA',
+Purnea_UniversityPeoples_College_Araria:'https://chat.whatsapp.com/CpF6q1WrZ57CkIfG1A74EZ',
+Purnea_UniversityPS_Deegre_College_Harda:'https://chat.whatsapp.com/C47M2XGNZvi95hX7BD0VLx',
+Purnea_UniversityPurnea_College_Purnea:'https://chat.whatsapp.com/JNy28zFt1QP7iYuGPxmzyz',
+Purnea_UniversityPurnea_Mahila_College_Purnia:'https://chat.whatsapp.com/I9XHPvTDx25Gnd1HINBzy8',
+Purnea_UniversityRDS_College_Salmari:'https://chat.whatsapp.com/IuGaQhv8DihKRPDtPBMZCA',
+Purnea_UniversityRKK_College_Purnea:'https://chat.whatsapp.com/Fo0w6cUU8T59056ZTBHR4e',
+Purnea_UniversityRL_College_MadhavNagar:'https://chat.whatsapp.com/FN39PVg9W5M7jbqJleHgCp',
+Purnea_UniversityRY_College_Manihari:'https://chat.whatsapp.com/CoJselS9Ihv18zHkFB8val',
+Purnea_UniversitySC_Degree_College_Katihar:'https://chat.whatsapp.com/JvKUlgdT2W3DeNt8w533fa',
+Purnea_UniversitySNSY_College_Rambagh:'https://chat.whatsapp.com/FKIY9AtjWte8LyvwS1BfSU',
+Purnea_UniversityYNP_College_Raniganj:'https://chat.whatsapp.com/ISkiXshfPdG690lAUyQfjA',
+BNMUall:"https://wa.me/917549445084",
+Otherother:"https://wa.me/917549445084"
+};
+window.onload = function() {
+    var Class = document.getElementById("Class");
+    var Subject = document.getElementById("Subject");
+    for (var x in ClassData) {
+        Class.options[Class.options.length] = new Option(x, x);
+    }
+    Class.onchange = function() {
+      Subject.length = 1;
+      var z = ClassData[this.value];
+      for (var y in z) {
+        Subject.options[Subject.options.length] = new Option(z[y], z[y]);
+      }
+    }
+	Subject.addEventListener('change',()=>{
+		const c = document.getElementById("Class").value+document.getElementById("Subject").value;
+	  document.getElementById("hh1").setAttribute("href", link[c]);
+	  document.getElementById("hh1").style.display = "block";
+	  document.getElementById("hh1").style.width = "80%";
+	})
+  }
+  
+</script>
+</head>
+
+<body>
+  <h1 class="head">PU Khabar</h1>
+  <a href="https://t.me/PurneaUniversity" class="tel">
+    <svg width="25px" height="25px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+    Join Telegram now
+  </a>
+  <select class="select" id="Class">
+    <option value="" selected>Select</option>
+  </select>
+  <select class="select" name="forma" id="Subject" >
+    <option value="" selected>Select</option>
+  </select>
+    <a href="" class="select" id="hh1">Click Here</a>
+</body>
+</html>
