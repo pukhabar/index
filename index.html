@@ -92,7 +92,7 @@
 </style>
 <script>
 var ClassData = {
-    "Purnea_University": ["AJ_Mahila_College_Banmankhi","AM_Degree_College_Araria","Araria_College_Araria","Balrampur_College_Balrampur","BMT_Law_College","BD_College_Barsoi","Bhagwati_Mandir_College_Barari","BNC_College_Dhamdaha","DS_College_Katihar","Forbesganj_College_Forbesganj","GLM_College_Banmankhi","Gov_Degree_College_Baisi","Gov_Degree_College_Dhamdaha","KB_Jha_College_Katihar","KD_College_Raniganj","Marwari_College_Kishanganj","MHAND_College_Thakurganj","MJM_Mahila_College_Katihar","ML_Arya_College_Kasba","MLDPKY_College_Araria","ND_College_Rambagh","Nehru_College_Bahadurganj","Peoples_College_Araria","PS_Deegre_College_Harda","Purnea_College_Purnea","Purnea_Mahila_College_Purnia","RDS_College_Salmari","RKK_College_Purnea","RL_College_MadhavNagar","RY_College_Manihari","SC_Degree_College_Katihar","SNSY_College_Rambagh","YNP_College_Raniganj"],
+    "Purnea_University": ["AJ Mahila College Banmankhi","AM_Degree_College_Araria","Araria_College_Araria","Balrampur_College_Balrampur","BMT_Law_College","BD_College_Barsoi","Bhagwati_Mandir_College_Barari","BNC_College_Dhamdaha","DS_College_Katihar","Forbesganj_College_Forbesganj","GLM_College_Banmankhi","Gov_Degree_College_Baisi","Gov_Degree_College_Dhamdaha","KB_Jha_College_Katihar","KD_College_Raniganj","Marwari_College_Kishanganj","MHAND_College_Thakurganj","MJM_Mahila_College_Katihar","ML_Arya_College_Kasba","MLDPKY_College_Araria","ND_College_Rambagh","Nehru_College_Bahadurganj","Peoples_College_Araria","PS_Deegre_College_Harda","Purnea_College_Purnea","Purnea_Mahila_College_Purnia","RDS_College_Salmari","RKK_College_Purnea","RL_College_MadhavNagar","RY_College_Manihari","SC_Degree_College_Katihar","SNSY_College_Rambagh","YNP_College_Raniganj"],
     "BNMU": ["all"],
     "Other": ["other"]
 }
@@ -147,7 +147,8 @@ window.onload = function() {
     }
 	Subject.addEventListener('change',()=>{
 		const c = document.getElementById("Class").value+document.getElementById("Subject").value;
-	  document.getElementById("hh1").setAttribute("href", link[c]);
+         const d=c.replace(/ /g, '_');
+	  document.getElementById("hh1").setAttribute("href", link[d]);
 	  document.getElementById("hh1").style.display = "flex";
 	  document.getElementById("note").style.display = "flex";
 	})
