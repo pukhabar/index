@@ -2,86 +2,12 @@
 <title>Whatsapp</title>
 <head>
 <style>
- .head{
-    display: block; 
-    text-align: center;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-	font-size:100px;
-  }
-  body{
-  background-color:rgb(245, 220, 220);
-  }
-  *{
-    padding: 5px 5px;
-	box-sizing: border-box;
-  }
-.select{
-    border: none;
-    border-radius: 20px;
-    display: block; 
-    margin: auto;
-	padding: 0 25px;
-    margin-bottom: 20px;
-    width: 80%;
-	height: 120px;
-	outline: none;
-	font-size:70px;
-  }
-  #hh1{
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: none;
-    margin-top: 10px;
-  flex-direction : row;
-  align-items:center;
-  justify-content:center;
-  font-size:80px;
-  }
-  #hh1:hover{
-    background-color: #009205;
-  }
-  .tel:first-child{
-  margin-right:60px;
-  }
-  svg{
-  width:150;
-  height:150;
-  }
-  #photo_{
-  display : flex;
-  flex-direction : row;
-  align-items:center;
-  justify-content:center;
-  margin-top:10px;
-  margin-bottom:15px;
-  }
-  #jion, #note{
-   font-size:56px;
-   flex-direction : column;
-  align-items:center;
-  justify-content:center;
-  color: green;
-  text-align:center;
-  }
-  #note{
-  display:none;
-  color: black;
-  }
-  span{
-  color: red;
-  }
-.label{
-     font-size:30px;
-     width:77%;
-     margin:auto;
-}
- select{
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+select {
   width: 100%;
-  padding: 12px;
+  padding: 18px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -90,6 +16,35 @@
   resize: vertical;
 }
 
+.join {
+  background-color: #04AA6D;
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#note{
+  margin-top: 18px;
+}
+.red{
+color:red;
+}
+svg{
+  width:150;
+  height:150;
+  }
 </style>
 <script>
 var ClassData = {
@@ -159,6 +114,7 @@ window.onload = function() {
 </head>
 
 <body>
+<div class="container">
   <h1 class="head">PU Khabar</h1>
     <div id="jion">Join Telegram or Facebook now</div>
   <div id='photo_'>
@@ -182,8 +138,9 @@ window.onload = function() {
   <select class="select" name="forma" id="Subject" >
     <option value="" selected>Select</option>
   </select>
-    <a href="" class="select" id="hh1">Click Here to Jion</a>
+    <a href="" class="join" id="hh1">Click Here to Jion</a>
 	
-	<div id="note">एक से अधिक ग्रुप में ना जुड़ें, अन्यथा ग्रुप से निकाल दिए जाएंगे। <br><span color="red" ><b>Note:-</b> लड़कियां प्राइवेसी को ध्यान में रखते हुए जुड़ें।</span></div>
+	<div id="note">एक से अधिक ग्रुप में ना जुड़ें, अन्यथा ग्रुप से निकाल दिए जाएंगे। <br><span class="red" ><b>Note:-</b> लड़कियां प्राइवेसी को ध्यान में रखते हुए जुड़ें।</span></div>
+</div>
 </body>
 </html>
