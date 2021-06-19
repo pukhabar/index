@@ -4,7 +4,13 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
-
+.head{
+    display: block; 
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 select {
   width: 100%;
   padding: 18px;
@@ -24,9 +30,10 @@ select {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+ display:none;
 }
 
-input[type=submit]:hover {
+.join:hover {
   background-color: #45a049;
 }
 
@@ -37,6 +44,8 @@ input[type=submit]:hover {
 }
 #note{
   margin-top: 18px;
+  color: green;
+  display:none;
 }
 .red{
 color:red;
@@ -44,6 +53,14 @@ color:red;
 svg{
   width:150;
   height:150;
+  }
+#photo_{
+  display : flex;
+  flex-direction : row;
+  align-items:center;
+  justify-content:center;
+  margin-top:10px;
+  margin-bottom:15px;
   }
 </style>
 <script>
@@ -105,8 +122,8 @@ window.onload = function() {
 		const c = document.getElementById("Class").value+document.getElementById("Subject").value;
          const d=c.replace(/ /g, '_');
 	  document.getElementById("hh1").setAttribute("href", link[d]);
-	  document.getElementById("hh1").style.display = "flex";
-	  document.getElementById("note").style.display = "flex";
+	  document.getElementById("hh1").style.display = "inline";
+	  document.getElementById("note").style.display = "block";
 	})
   }
   
@@ -116,7 +133,7 @@ window.onload = function() {
 <body>
 <div class="container">
   <h1 class="head">PU Khabar</h1>
-    <div id="jion">Join Telegram or Facebook now</div>
+    <h3 id="jion">Join Telegram or Facebook now</h3>
   <div id='photo_'>
   <a href="https://t.me/PurneaUniversity" class="tel">
     <svg height="512pt" viewBox="0 -24 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m512 0-512 217.628906 134.222656 53.269532 47.78125 179.605468 87.980469-85.246094 143.132813 98.855469zm-323.023438 293.921875-6.972656 156.582031-18.035156-184.34375 348.03125-266.160156zm0 0" fill="#00d7df"/><path d="m512 0-323.023438 293.921875-6.972656 156.582031 87.980469-85.246094 143.132813 98.855469zm0 0" fill="#00aadf"/></svg></a>
